@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="623.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="netflix.pkg2.VideopalayerController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="623.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1086.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#333333" />
+                  <Stop color="#333333" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="556.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="1086.0">
+         <fill>
+            <LinearGradient startY="0.6095238095238095">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#ffffff00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="4.0" layoutY="1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1079.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Button fx:id="cross" layoutX="1039.0" layoutY="1.0" mnemonicParsing="false" onAction="#windowclosed" prefHeight="65.0" prefWidth="59.0" style="-fx-background-color: black;" text="X" textAlignment="CENTER" textFill="#fefefe" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Century Gothic Bold" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <MediaView fx:id="mediaview" fitHeight="490.0" fitWidth="990.0" layoutX="55.0" layoutY="78.0" />
+      <Button fx:id="playbutton" layoutX="432.0" layoutY="576.0" mnemonicParsing="false" onAction="#playbuttonpressed" prefHeight="33.0" prefWidth="59.0" style="-fx-background-color: DC0505;" text="Play" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="stopbutton" layoutX="608.0" layoutY="576.0" mnemonicParsing="false" onAction="#stopbuttonpressed" prefHeight="33.0" prefWidth="66.0" style="-fx-background-color: DC0505;" text="Stop" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="pausebutton" layoutX="511.0" layoutY="576.0" mnemonicParsing="false" onAction="#pausebuttonpressed" prefHeight="33.0" prefWidth="77.0" style="-fx-background-color: DC0505;" text="Pause" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/netlfix-%20new%20(2).jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="movietitle" fill="#fefefe" layoutX="265.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="570.13671875">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
