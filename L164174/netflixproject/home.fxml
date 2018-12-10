@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="627.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="netflixproject.HomeController">
+   <children>
+      <ImageView fitHeight="627.0" fitWidth="1085.0" onMouseClicked="#dropdownfunction" pickOnBounds="true">
+         <image>
+            <Image url="@../images/bg2.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="backbutton" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: DC0505;" text="Back" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="cross" layoutX="1029.0" mnemonicParsing="false" onAction="#windowclosed" prefHeight="31.0" prefWidth="30.0" style="-fx-background-color: DC0505;" text="X" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <MenuButton fx:id="menu" layoutX="853.0" layoutY="3.0" mnemonicParsing="false" pickOnBounds="false" text="MenuButton">
+        <items>
+            <MenuItem fx:id="editUser" mnemonicParsing="false" onAction="#editSettings" text="Edit settings" />
+          <MenuItem fx:id="signout" mnemonicParsing="false" onAction="#Signout" text="Sign out" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>
