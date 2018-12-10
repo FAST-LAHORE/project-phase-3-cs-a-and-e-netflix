@@ -1,0 +1,26 @@
+.combo-box
+{
+	-fx-border-width: 0.5px;
+	-fx-border-color:#dc0505;
+	-fx-border-radius:50px;
+	-fx-background-radius:50px;
+	-fx-font-size:13px;
+	-fx-padding:0px;
+	-fx-font-weight:700;
+	-fx-font-family:'sans-serif';
+        -fx-background-radius: 50px;
+        -fx-background-color: #dc0505;
+	
+}
+.combo-box:hover
+{
+    -fx-text-fill: #fefefe;
+    -fx-background-color: #fefefe;
+    -fx-border-color: #fefefe;
+}
+.progress-bar
+{
+    -fx-accent: #dc0505;
+    -fx-control-inner-background: black;
+    -fx-background-color:black;
+}

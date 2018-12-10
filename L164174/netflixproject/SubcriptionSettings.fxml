@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="netflixproject.SubcriptionSettingsController">
+   <children>
+      <ImageView fitHeight="597.0" fitWidth="1109.0" onMouseClicked="#dropdownfunction" pickOnBounds="true">
+         <image>
+            <Image url="@../images/1.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Button fx:id="backbutton" layoutY="-1.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: DC0505;" text="Back" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="cross" layoutX="1072.0" layoutY="-2.0" mnemonicParsing="false" onAction="#windowclosed" prefHeight="31.0" prefWidth="30.0" style="-fx-background-color: DC0505;" text="X" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <MenuButton fx:id="menu" layoutX="871.0" layoutY="2.0" mnemonicParsing="false" pickOnBounds="false" text="MenuButton">
+         <items>
+            <MenuItem fx:id="signout" mnemonicParsing="false" onAction="#Signout" text="Sign out" />
+         </items>
+      </MenuButton>
+      <Text fill="WHITE" layoutX="142.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update your subscription plan:" wrappingWidth="677.13671875">
+         <font>
+            <Font name="Century Gothic Bold" size="36.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="plans" layoutX="622.0" layoutY="334.0" prefHeight="33.0" prefWidth="200.0" promptText="Select Plan" />
+      <Text fill="WHITE" layoutX="163.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancel Subscription Plan:" textAlignment="RIGHT" wrappingWidth="368.13671875">
+         <font>
+            <Font name="Century Gothic Bold" size="24.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="44.0" layoutX="622.0" layoutY="212.0" stroke="#dc0505" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <Text fx:id="currentPlan" fill="#dc0505" layoutX="622.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="plan" textAlignment="CENTER" wrappingWidth="200.00000509247184">
+         <font>
+            <Font name="Century Gothic Bold" size="24.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Text>
+      <ImageView fx:id="upSub" accessibleHelp="Update plan" fitHeight="33.0" fitWidth="37.0" layoutX="871.0" layoutY="334.0" onMouseClicked="#updateSubsciption" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../images/edit3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="delSub" accessibleHelp="Remove plan" fitHeight="33.0" fitWidth="37.0" layoutX="871.0" layoutY="218.0" onMouseClicked="#RemoveSubscription" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/delete.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="163.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Subsciption Plan:" textAlignment="RIGHT" wrappingWidth="368.13671875">
+         <font>
+            <Font name="Century Gothic Bold" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

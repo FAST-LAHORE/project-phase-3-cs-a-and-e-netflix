@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootpane" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1191.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="netflix.OOASAController">
+   <children>
+      <ComboBox fx:id="genres" layoutX="20.0" layoutY="482.0" onAction="#loadgenrepage" prefHeight="37.0" prefWidth="199.0" style="-fx-background-color: #DC0505;" />
+      <Text fill="#fcf9f9" layoutX="273.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MOST POPULAR ON NETFLIX" wrappingWidth="160.00000329315662" />
+      <Text fill="#fcf9f9" layoutX="273.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRENDING" wrappingWidth="160.00000329315662" />
+      <ImageView fx:id="imageview1" fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(6).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageview2" fitHeight="150.0" fitWidth="200.0" layoutX="513.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(9).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageview3" fitHeight="150.0" fitWidth="200.0" layoutX="721.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(5).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageview5" fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(7).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageview7" fitHeight="150.0" fitWidth="200.0" layoutX="721.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(10).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageview6" fitHeight="150.0" fitWidth="200.0" layoutX="513.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(4).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageview8" fitHeight="150.0" fitWidth="200.0" layoutX="930.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(12).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageview4" fitHeight="150.0" fitWidth="200.0" layoutX="930.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(8).jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="searchbar" layoutX="802.0" layoutY="44.0" prefHeight="23.0" prefWidth="160.0" style="-fx-background-color: #DC0505; fo: fcf9f9;" text="Search Here">
+         <effect>
+            <Glow />
+         </effect>
+      </TextField>
+      <ImageView fitHeight="22.0" fitWidth="28.0" layoutX="1030.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images%20(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="227.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMG-20181130-WA0002.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="20.0" layoutY="178.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="199.0" style="-fx-background-color: #dc0505;" text="HOME" textAlignment="CENTER" textFill="#e8ebee" />
+      <Button fx:id="moviesbutton" layoutX="21.0" layoutY="265.0" mnemonicParsing="false" onAction="#loadmovies" prefHeight="37.0" prefWidth="199.0" style="-fx-background-color: #dc0505;" text="MOVIES" textAlignment="CENTER" textFill="#eeeded" />
+      <Button fx:id="seriesbutton" layoutX="18.0" layoutY="346.0" mnemonicParsing="false" onAction="#loadseries" prefHeight="37.0" prefWidth="199.0" style="-fx-background-color: #dc0505;" text="SERIES" textAlignment="CENTER" textFill="WHITE" />
+      <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="31.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="31.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="31.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="closeButton" layoutX="1130.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #DC0505;" text="X">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="11.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #DC0505;" text="←">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="next" layoutX="1147.0" layoutY="253.0" mnemonicParsing="false" onAction="#traverseright" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #DC0505;" text="→">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="next1" layoutX="1147.0" layoutY="412.0" mnemonicParsing="false" onAction="#traverseright1" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #DC0505;" text="→">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="previous1" layoutX="249.0" layoutY="412.0" mnemonicParsing="false" onAction="#traverseleft1" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #DC0505;" text="←">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="previous" layoutX="256.0" layoutY="228.0" mnemonicParsing="false" onAction="#traverseleft" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #DC0505;" text="←">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="721.0" layoutY="44.0" mnemonicParsing="false" onAction="#titlesearch" text="search" />
+      <Label layoutX="20.0" layoutY="445.0" prefHeight="45.0" prefWidth="199.0" style="-fx-background-color: #DC0505;" text="                   SELECT GENRE HERE" textAlignment="CENTER" textFill="#ebe7e7" />
+      <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="31.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download%20(1).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label7" layoutX="783.0" layoutY="507.0" prefHeight="17.0" prefWidth="77.0" textFill="#ebe3e3" />
+      <Label fx:id="label2" layoutX="575.0" layoutY="325.0" prefHeight="17.0" prefWidth="77.0" textFill="#ebe3e3" />
+      <Label fx:id="label3" layoutX="764.0" layoutY="325.0" prefHeight="17.0" prefWidth="77.0" textFill="#ebe3e3" />
+      <Label fx:id="label4" layoutX="992.0" layoutY="325.0" prefHeight="17.0" prefWidth="77.0" textFill="#ebe3e3" />
+      <Label fx:id="label5" layoutX="383.0" layoutY="507.0" prefHeight="17.0" prefWidth="77.0" textFill="#ebe3e3" />
+      <Label fx:id="label6" layoutX="575.0" layoutY="507.0" prefHeight="17.0" prefWidth="77.0" textFill="#ebe3e3" />
+      <Label fx:id="label1" layoutX="382.0" layoutY="335.0" prefHeight="17.0" prefWidth="77.0" textFill="#ebe3e3" />
+      <Label fx:id="label8" layoutX="1003.0" layoutY="499.0" prefHeight="17.0" prefWidth="77.0" textFill="#ebe3e3" />
+      <Label fx:id="label11" layoutX="791.0" layoutY="669.0" prefHeight="17.0" prefWidth="62.0" textFill="#e8e4e4" />
+      <Label fx:id="label10" layoutX="596.0" layoutY="667.0" prefHeight="17.0" prefWidth="62.0" textFill="#e8e4e4" />
+      <Label fx:id="label9" layoutX="383.0" layoutY="677.0" prefHeight="17.0" prefWidth="62.0" textFill="#e8e4e4" />
+      <Label fx:id="label12" layoutX="1017.0" layoutY="659.0" prefHeight="17.0" prefWidth="62.0" textFill="#f5efef" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DISAPPEAR" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootpane" prefHeight="589.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="netflix.pkg2.RatingpageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="589.0" stroke="WHITE" strokeType="INSIDE" width="1079.0" />
+      <ImageView fx:id="movieimage" fitHeight="525.0" fitWidth="933.0" layoutX="565.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="1.0">
+         <image>
+            <Image url="@../images/avenger-infinity-war.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1079.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" height="589.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1079.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.20476190476190476" startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#0000003a" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="59.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/netlfix-%20new%20(2).jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="movietitle" fill="#fefefe" layoutX="59.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avengers: Infinity War" wrappingWidth="619.13671875">
+         <font>
+            <Font name="Century Gothic Bold" size="48.0" />
+         </font>
+      </Text>
+      <Text fill="#fefefe" layoutX="63.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="cross" layoutX="999.0" mnemonicParsing="false" onAction="#crosspressed" prefHeight="65.0" prefWidth="34.0" style="-fx-background-color: black;" text="X" textFill="#fefefe" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Century Gothic Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="backbutton" layoutY="-2.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="59.0" style="-fx-background-color: DC0505;" text="Back" textFill="#fefefe" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="HDbutton" layoutX="785.0" layoutY="543.0" mnemonicParsing="false" onAction="#StreaminHD" prefHeight="32.0" prefWidth="136.0" style="-fx-background-color: dc0505;" text="Stream in HD" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Reflection fraction="0.63" topOpacity="0.44" />
+               </input>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="genre" fill="WHITE" layoutX="60.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="262.13671875">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </Text>
+      <Button fx:id="SDbutton" layoutX="929.0" layoutY="543.0" mnemonicParsing="false" onAction="#streaminSD" prefHeight="32.0" prefWidth="136.0" style="-fx-background-color: dc0505;" text="Stream in SD" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Reflection fraction="0.55" />
+               </input>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="UHDbutton" layoutX="642.0" layoutY="543.0" mnemonicParsing="false" onAction="#streaminUHD" prefHeight="32.0" prefWidth="136.0" style="-fx-background-color: dc0505;" text="Stream in UHD" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Reflection fraction="0.6" />
+               </input>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="homebutton" layoutX="259.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: black;" text="Home" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="historybutton" layoutX="341.0" layoutY="17.0" mnemonicParsing="false" onAction="#openhistory" style="-fx-background-color: black;" text="History" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="#fefefe" layoutX="59.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Runtime :">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="runtime" fill="#fefefe" layoutX="156.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2h 40min">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#fefefe" layoutX="59.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating" textAlignment="CENTER" wrappingWidth="73.47314131259918">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#dc0505" layoutX="65.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="🌟">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#dc0505" layoutX="65.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="🌟 🌟">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#dc0505" layoutX="65.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="🌟 🌟 🌟">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#dc0505" layoutX="65.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="🌟 🌟 🌟 🌟">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#dc0505" layoutX="65.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="🌟 🌟 🌟 🌟 🌟">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="onebar" layoutX="227.0" layoutY="437.0" prefHeight="18.0" prefWidth="123.0" progress="0.0" stylesheets="@selectseason.css">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="twobar" layoutX="227.0" layoutY="467.0" prefHeight="18.0" prefWidth="123.0" progress="0.0" stylesheets="@selectseason.css" />
+      <ProgressBar fx:id="threebar" layoutX="227.0" layoutY="497.0" prefHeight="18.0" prefWidth="123.0" progress="0.0" stylesheets="@selectseason.css" />
+      <ProgressBar fx:id="fourbar" layoutX="227.0" layoutY="527.0" prefHeight="18.0" prefWidth="123.0" progress="0.0" stylesheets="@selectseason.css" />
+      <ProgressBar fx:id="fivebar" layoutX="227.0" layoutY="557.0" prefHeight="18.0" prefWidth="123.0" progress="0.0" stylesheets="@selectseason.css" />
+      <Button fx:id="ratebutton" layoutX="132.0" layoutY="334.0" mnemonicParsing="false" onAction="#openratingpage" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: dc0505;" text="Rate" textAlignment="CENTER" textFill="#fefefe">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="overallrating" fill="#fefefe" layoutX="67.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
